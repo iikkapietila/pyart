@@ -26,6 +26,7 @@ def launcher_window():
     # Countdown here. Above variable "secs" defines the time for the countdown
     while secs >= 0:
         text = "Please click here to activate the windows. \n" \
+               "Use the letter F or J to make the selection. \n \n \n" \
                "Your test will begin in " + str(secs)
 
         c = canvas.create_text(RESOLUTION_X / 2 - 50, RESOLUTION_Y / 2 - 50,
