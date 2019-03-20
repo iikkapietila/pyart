@@ -7,6 +7,7 @@ In this beta version a screen resolution of 1920 x 1080 is assumed. The programm
 
 
 The programme functions in the following manner:
+
 -A folder named "pictures" (case sensitive) is assumed to be placed in the same folder as the pyart_0_1.py. This "pictures" folder includes the pictures that are wanted to be shown during the test.
 
 -A file named "sentences.txt" (again, case sensitive) is assumed to be placed in the same folder as thee pyart_0_1.py. This "sentences.txt" file includes the priming sentences / expressions that are wanted to be shown during the test. Each expression should be placed on their own line.
