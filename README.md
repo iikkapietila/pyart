@@ -14,7 +14,7 @@ The programme functions in the following manner:
 
 -Programme generates an image pair list for each expression so that all of the possible combinable pairs of pictures will be tested against each other for each expression. The order is semi-randomized using random.shuffle() function.
 
--Procedure consists of iterating all the possible pairs for each expression so that the expression is displayed first for three (3) seconds and the pair is displayed until the selection is made.
+-Procedure consists of iterating all the possible pairs for each expression so that the expression is displayed first for three (3) seconds and the pair is displayed until the selection is made. Selection happens using keyboard keys "F" or "J".
 
 -In the beginning of execution the programme asks the csv file name in which user wants to save the output of the selections. File will be named with date and time prefix + user input (+ .csv). 
 
