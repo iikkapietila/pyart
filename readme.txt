@@ -1,7 +1,7 @@
-Pyart beta v0.1 by Iikka Pietil‰ 2019
+Pyart beta v0.1 by Iikka Pietil√§ 2019
 
-This is a Python implementation of ART method (Affective Reaction Times) which can be used to 
-e.g. measure semantic distances between symbols or icons. Tested on python 3.5, 3.6, 3.7. Libraries used: os, tkinter, time, PIL (aka PILLOW), random and csv.
+This is a Python implementation of ART method (Affective Reaction Times) which can be used to e.g. measure semantic distances between symbols or icons or to test/compare other artefacts with a priming expression. Tested on python 3.5, 3.6, 3.7. Libraries used: os, tkinter, time, PIL (aka PILLOW), random and csv.
+
 
 In this beta version a screen resolution of 1920 x 1080 is assumed. The programme will run on top and in fullscreen. In the beginning of the testing sequence a countdown is displayed. Please click anywhere on this screen to make sure that the testing windows is focused so keyboard input functions correctly.
 
@@ -18,7 +18,7 @@ The programme functions in the following manner:
 
 For comments, bugs, problems and needs for next versions can be sent to: iikka.pietilae@gmail.com
 
-(c) Iikka Pietil‰ 2019
+(c) Iikka Pietil√§ 2019
 http://www.iikka.org/
 iikka.pietilae@gmail.com
 
