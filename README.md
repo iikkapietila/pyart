@@ -31,3 +31,5 @@ For comments, bugs, problems and needs for next versions can be sent to: iikka.p
 http://www.iikka.org/
 iikka.pietilae@gmail.com
 
+Recognized issues:
+-As each pair window is destroyed after selection is made, the desktop is shown for a brrief time before the next sentence is displayed. This will be fixed in next version so that desktop will not be flashed and just the blank programme background is displayed in between.
