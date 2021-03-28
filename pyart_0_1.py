@@ -6,8 +6,12 @@ from PIL import ImageTk, Image
 import random
 import csv
 
-RESOLUTION_X = 1920
-RESOLUTION_Y = 1080
+r = Tk()
+
+RESOLUTION_X = r.winfo_screenwidth()
+RESOLUTION_Y = r.winfo_screenheight()
+
+r.destroy()
 
 FULLSCREEN = True
 
