@@ -3,7 +3,7 @@
 This is a Python implementation of ART method (Affective Reaction Times) which can be used to 
 e.g. measure semantic distances between symbols or icons or to test/compare other artefacts with a priming expression. Tested on python 3.5, 3.6, 3.7. Libraries used: os, tkinter, time, PIL (aka PILLOW), random and csv.
 
-In this beta version a screen resolution of 1920 x 1080 is assumed. The programme will run on top and in fullscreen. In the beginning of the testing sequence a countdown is displayed. Please click anywhere on this screen to make sure that the testing windows is focused so keyboard input functions correctly.
+In this beta version program runs always in full resolution. The programme will run on top and in fullscreen. In the beginning of the testing sequence a countdown is displayed. Please click anywhere on this screen to make sure that the testing windows is focused so keyboard input functions correctly.
 
 
 # The programme functions in the following manner
