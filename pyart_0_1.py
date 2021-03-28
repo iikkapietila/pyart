@@ -25,7 +25,7 @@ def launcher_window():
     canvas = Canvas(root, width=RESOLUTION_X, height=RESOLUTION_Y)
     canvas.pack()
 
-    secs = 15
+    secs = 5
 
     # Countdown here. Above variable "secs" defines the time for the countdown
     while secs >= 0:
@@ -303,14 +303,12 @@ def main():
             set = (sentence, image[0], image[1])
             display_list.append(set)
 
-    print()
-    print("list of pairs to display created succesfully")
-    print()
+    print("\nlist of pairs to display created succesfully\n")
+
     for item in display_list:
         print(item)
-    print()
-    print("length of display list / items to display: ", len(display_list))
-    print()
+    print("\nlength of display list / items to display: ", len(display_list),"\n")
+
 
     csv_file = create_csv()
     random.shuffle(display_list)
