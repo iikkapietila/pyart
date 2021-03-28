@@ -42,7 +42,6 @@ def launcher_window():
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
 
 
 # This is the function for displaying the primes / sentences
@@ -66,7 +65,6 @@ def sentence_display(sentence):
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
     return
 
 
@@ -95,7 +93,6 @@ def exit_window():
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
 
 
 
