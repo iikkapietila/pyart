@@ -1,13 +1,16 @@
+import csv
 import os
+from PIL import ImageTk, Image
 from tkinter import *
 import time
-from PIL import ImageTk, Image
-
 import random
-import csv
 
-RESOLUTION_X = 1920
-RESOLUTION_Y = 1080
+r = Tk()
+
+RESOLUTION_X = r.winfo_screenwidth()
+RESOLUTION_Y = r.winfo_screenheight()
+
+r.destroy()
 
 FULLSCREEN = True
 
@@ -21,7 +24,7 @@ def launcher_window():
     canvas = Canvas(root, width=RESOLUTION_X, height=RESOLUTION_Y)
     canvas.pack()
 
-    secs = 15
+    secs = 5
 
     # Countdown here. Above variable "secs" defines the time for the countdown
     while secs >= 0:
@@ -29,16 +32,18 @@ def launcher_window():
                "Use the letter F or J to make the selection. \n \n \n" \
                "Your test will begin in " + str(secs)
 
-        c = canvas.create_text(RESOLUTION_X / 2 - 50, RESOLUTION_Y / 2 - 50,
-                               text=text, font = "Arial 50")
-
+        c = canvas.create_text(
+            RESOLUTION_X / 2 - 50, 
+            RESOLUTION_Y / 2 - 50,
+            text=text, 
+            font = "Arial 50"
+            )
         canvas.update()
         time.sleep(1)
         canvas.delete("all")
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
 
 
 # This is the function for displaying the primes / sentences
@@ -54,15 +59,17 @@ def sentence_display(sentence):
     secs = 3
 
     while secs >= 0:
-        c = canvas.create_text(RESOLUTION_X / 2 - 50, RESOLUTION_Y / 2 - 50,
-                               text=sentence, font = "Arial 25")
-
+        c = canvas.create_text(
+            RESOLUTION_X / 2 - 50, 
+            RESOLUTION_Y / 2 - 50,
+            text=sentence, 
+            font = "Arial 25"
+            )
         canvas.update()
         time.sleep(1)
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
     return
 
 
@@ -82,17 +89,17 @@ def exit_window():
         text = "Test is now over. Thank you. \n" \
                "Software exiting in " + str(secs)
 
-        c = canvas.create_text(RESOLUTION_X / 2 - 50, RESOLUTION_Y / 2 - 50,
-                               text=text, font = "Arial 50")
-
+        c = canvas.create_text(
+            RESOLUTION_X / 2 - 50,
+            RESOLUTION_Y / 2 - 50,
+            text=text, font = "Arial 50"
+            )
         canvas.update()
         time.sleep(1)
         canvas.delete("all")
         secs = secs -1
 
     root.destroy()
-    root.mainloop()
-
 
 
 # The main window for showing the pictures.
@@ -111,8 +118,14 @@ def window(picture1, picture2, time_beginning, csv_file, sentence):
     # previous window
     def keypressnode(key):
         if key.char == "f" or key.char == "j":
-            keypress_handler(key.char, picture1, picture2, time_beginning,
-                             csv_file, sentence)
+            keypress_handler(
+                key.char, 
+                picture1, 
+                picture2, 
+                time_beginning,
+                csv_file, 
+                sentence
+                )
             root.destroy()
         else:
             return
@@ -144,8 +157,14 @@ def keypress_handler(char, picture1, picture2, time_beginning, csv_file,
                      sentence):
     answer = char
     if answer == "f" or answer == "j":
-        save_input(answer, picture1, picture2, time_beginning, csv_file,
-                   sentence)
+        save_input(
+            answer, 
+            picture1, 
+            picture2, 
+            time_beginning, 
+            csv_file,
+            sentence
+            )
 
 
 # Middlepiece to determine what to write to csv and calls for the csv
@@ -160,8 +179,15 @@ def save_input(answer, picture1, picture2, time_beginning, csv_file,
         print("answer waas j, which is 2")
         selection = picture2
 
-    selection_writer(sentence, answer, picture1, picture2, time_beginning, csv_file,
-                     selection)
+    selection_writer(
+        sentence, 
+        answer, 
+        picture1, 
+        picture2, 
+        time_beginning, 
+        csv_file,
+        selection
+        )
 
 
 # Writing to csv happens here.
@@ -181,7 +207,6 @@ def selection_writer(sentence, answer, picture1, picture2, time_beginning, csv_f
     with open(csv_file, "a", newline="") as output:
         writer = csv.writer(output)
         writer.writerow([writables])
-
 
 
 # Function for creating a list of image pairs from folder /pictures/
@@ -299,14 +324,11 @@ def main():
             set = (sentence, image[0], image[1])
             display_list.append(set)
 
-    print()
-    print("list of pairs to display created succesfully")
-    print()
+    print("\nlist of pairs to display created succesfully\n")
+
     for item in display_list:
         print(item)
-    print()
-    print("length of display list / items to display: ", len(display_list))
-    print()
+    print("\nlength of display list / items to display: ", len(display_list),"\n")
 
     csv_file = create_csv()
     random.shuffle(display_list)
