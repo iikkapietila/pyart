@@ -18,6 +18,8 @@ The programme functions in the following manner:
 
 For comments, bugs, problems and needs for next versions can be sent to: iikka.pietilae@gmail.com
 
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (http://creativecommons.org/licenses/by-nc/4.0/)
+
 (c) Iikka Pietilä 2019
 http://www.iikka.org/
 iikka.pietilae@gmail.com
